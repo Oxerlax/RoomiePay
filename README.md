@@ -99,6 +99,14 @@ roommate-expense-splitter/
 │
 ├── data/
 │   └── expenses.txt
+|
+├── tests/
+│   ├── model/
+│   │   ├── RoommateTests.java
+│   │   └── ExpenseTest.java
+│   │
+│   └── service/
+│       └── ExpenseManagerTests.java
 │
 ├── README.md
 └── .gitignore
