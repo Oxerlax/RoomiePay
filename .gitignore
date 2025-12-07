@@ -1,0 +1,25 @@
+# Java build files
+
+*.class
+*.jar
+*.war
+*.ear
+target/
+out/
+
+# IntelliJ IDEA
+
+.idea/
+*.iml
+
+# OS / System Files
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+
+*.log
+
+# Local App Data (None for now)
