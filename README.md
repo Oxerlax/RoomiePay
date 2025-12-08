@@ -153,6 +153,8 @@ JavaFX GUI Development
 
 Financial & Business Logic Modeling
 
+IDE Development (IntelliJ IDEA)
+
 Git & GitHub Version Control
 
 ✅ Current Status
