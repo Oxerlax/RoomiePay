@@ -1,36 +1,39 @@
 package model;
 
 import org.junit.Test;
+
+import java.math.BigDecimal;
+
 import static org.junit.Assert.*;
 
 public class RoommateTests {
 
     @Test
     public void testNewRoommateStartsWithZeroBalance(){
-        Roommate roommate = new Roommate("Kris");
-        assertEquals(0.0, roommate.getBalance(), 0.001);
+        Roommate roommate = new Roommate("Kris", BigDecimal.ZERO);
+        assertEquals(BigDecimal.ZERO, roommate.getBalance());
     }
 
     @Test
     public void testUpdateBalancePositive(){
-        Roommate roommate = new Roommate("Nick");
+        Roommate roommate = new Roommate("Nick", BigDecimal.ZERO);
         roommate.updateBalance(9.99);
-        assertEquals(9.99, roommate.getBalance(), 0.001);
+        assertEquals(BigDecimal.valueOf(9.99), roommate.getBalance());
     }
 
     @Test
     public void testUpdateBalanceNegative(){
-        Roommate roommate = new Roommate("David");
+        Roommate roommate = new Roommate("David", BigDecimal.ZERO);
         roommate.updateBalance(-3.14);
-        assertEquals(-3.14, roommate.getBalance(), 0.001);
+        assertEquals(BigDecimal.valueOf(-3.14), roommate.getBalance());
     }
 
     @Test
     public void testResetBalance(){
-        Roommate roommate = new Roommate("Zachary");
+        Roommate roommate = new Roommate("Zachary", BigDecimal.ZERO);
         roommate.updateBalance(74.99);
         roommate.updateBalance(-14.99);
         roommate.resetBalance();
-        assertEquals(0.0, roommate.getBalance(), 0.001);
+        assertEquals(BigDecimal.ZERO, roommate.getBalance());
     }
 }
