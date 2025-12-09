@@ -1,4 +1,4 @@
-RoommiePay (Java Desktop Application)
+RoomiePay (Java Desktop Application)
 
 📌 Project Overview
 
