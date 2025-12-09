@@ -1,8 +1,8 @@
-Roommate Expense Splitter (Java Desktop Application)
+RoommiePay (Java Desktop Application)
 
 📌 Project Overview
 
-The Roommate Expense Splitter is a Java-based desktop application designed to help roommates fairly manage and split shared expenses such as rent, groceries, utilities, and subscriptions. The application allows users to enter group expenses, automatically calculates balances, and determines who owes whom; all with persistent file storage and a clean graphical user interface.
+RoomiePay is a Java-based desktop application designed to help roommates fairly manage and split shared expenses such as rent, groceries, utilities, and subscriptions. The application allows users to enter group expenses, automatically calculates balances, and determines who owes whom; all with persistent file storage and a clean graphical user interface.
 
 This project is being developed as a real-world portfolio application to demonstrate object-oriented programming, file persistence, financial computation logic, and GUI-based event-driven programming in Java.
 
