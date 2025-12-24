@@ -3,6 +3,7 @@ package model;
 import org.junit.Test;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 import static org.junit.Assert.*;
 
@@ -34,6 +35,6 @@ public class RoommateTests {
         roommate.updateBalance(BigDecimal.valueOf(74.99));
         roommate.updateBalance(BigDecimal.valueOf(-14.99));
         roommate.resetBalance();
-        assertEquals(BigDecimal.ZERO, roommate.getBalance());
+        assertEquals(BigDecimal.ZERO.setScale(2, RoundingMode.HALF_UP), roommate.getBalance());
     }
 }
