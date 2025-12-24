@@ -21,9 +21,8 @@ public class Roommate{
         return this.balance;
     }
 
-    public void updateBalance(double amount){
-        BigDecimal moneyAmount = BigDecimal.valueOf(amount);
-        this.balance = this.balance.add(moneyAmount).setScale(2, RoundingMode.HALF_UP);
+    public void updateBalance(BigDecimal amount){
+        this.balance = this.balance.add(amount).setScale(2, RoundingMode.HALF_UP);
     }
 
     public void resetBalance(){
