@@ -24,15 +24,7 @@ Core Backend Logic
 
 Add and remove roommates
 
-Add new expenses with:
-
-Description
-
-Amount
-
-Payer
-
-Participants
+Add new expenses with a description, amount, payer, and participants
 
 Automatic balance calculation
 
