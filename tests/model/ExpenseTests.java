@@ -18,7 +18,7 @@ public class ExpenseTests {
 
         Expense expense = new Expense("Groceries", BigDecimal.valueOf(89.99).setScale(2, RoundingMode.HALF_UP), new Roommate("Kris", BigDecimal.ZERO), participants);
 
-        assertEquals("Groceries", expense.getExpense());
+        assertEquals("Groceries", expense.getExpenseName());
         assertEquals(BigDecimal.valueOf(89.99).setScale(2, RoundingMode.HALF_UP), expense.getCost());
         assertEquals(new Roommate("Kris", BigDecimal.ZERO), expense.getPayer());
         assertEquals(participants, expense.getParticipants());
