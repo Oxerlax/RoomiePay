@@ -4,6 +4,7 @@ import model.Expense;
 import model.Roommate;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -48,6 +49,9 @@ public class ExpenseManager {
      * @param roommate The roommate to add to the map of roommates
      */
     public void addRoommate(Roommate roommate){
+        if (this.roommates.containsKey(roommate.getName())){
+            throw new IllegalArgumentException("Roommate has already been added, try to create a roommate with a unique name.");
+        }
         this.roommates.put(roommate.getName(), roommate);
     }
 
@@ -64,7 +68,7 @@ public class ExpenseManager {
      * has their balance updated to reflect if they owe money for paying this expense.
      * @param expense The expense that the payer pays for and distributes the cost equally to participants
      */
-    public void applyExpense(Expense expense){
+    private void applyExpense(Expense expense){
         BigDecimal share = expense.costPerPerson();
 
         Roommate payer = this.roommates.get(expense.getPayer().getName());
@@ -81,7 +85,10 @@ public class ExpenseManager {
      * the roommates participating in paying that expense
      * @param expense The expense to be added to a list of expenses
      */
-    private void addExpense(Expense expense){
+    public void addExpense(Expense expense){
+        if (expense.getCost().compareTo(BigDecimal.valueOf(0.00).setScale(2, RoundingMode.HALF_UP)) < 0){
+            throw new IllegalArgumentException("Cost of an expense can't be negative.");
+        }
         this.expenses.add(expense);
         applyExpense(expense);
     }
@@ -128,4 +135,9 @@ public class ExpenseManager {
 
         return sum;
     }
+
+//    public static void main(String[] args){
+//        Roommate roommate = new Roommate("Kris", BigDecimal.valueOf(89.99));
+//        System.out.println(roommate.getBalance());
+//    }
 }
