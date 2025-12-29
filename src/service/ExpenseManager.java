@@ -135,9 +135,4 @@ public class ExpenseManager {
 
         return sum;
     }
-
-//    public static void main(String[] args){
-//        Roommate roommate = new Roommate("Kris", BigDecimal.valueOf(89.99));
-//        System.out.println(roommate.getBalance());
-//    }
 }
